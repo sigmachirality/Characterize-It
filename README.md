@@ -1,4 +1,4 @@
-#Characterize-It
+# Characterize-It
 Comic book characters come in all shapes and sizes. But do we view comic characters as their original artist intended? Does the gender or appearance of a character influence how we describe them? To answer these questions, we will ask MTurkers to describe different comic book characters with specific terms. Then, using machine learning models, we will seek to determine which features and terms are commonly associated with characters of a certain gender and alignment. We hope that the results of our project can be used to help artists and creators avoid stereotypes, push the envelope of character design, and ensure their character isn't misinterpreted by an audience.
 
 ## Components
