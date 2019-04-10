@@ -20,3 +20,36 @@ Comic book characters come in all shapes and sizes. But do we view comic charact
 - Feature Extraction: 2pt - Run PCA and other techniques
 - GANs Model: 3pt - Build model to generate comic characters
 - Web app: 4pt - Host subset of models online
+
+## Data
+
+### Quality Control
+The quality control module `qc.py` is in the `src/` directory. It cleans data input, strips unneeded information, checks the validity of responses to a test question, ensures validity of given adjectives and removes duplicate responses.
+
+Input to the quality control module comes in the form of a large CSV file with many fields. The following fields are relevant:
+- HITId - The ID of the HIT in question.
+- WorkerId - The ID of the worker who completed the HIT.
+- Input.image_url - The URL for the image shown to the worker.
+- Input.prompt - The prompt for the verification test.
+- Answer.adjective0 through Answer.adjective9 - The worker's responses to the shown image.
+- Answer.seen.on - Whether or not the worker has seen the character before.
+- Answer.type_test - The worker's response to the verification test.
+
+Output is a CSV that contains similar fields:
+- hit_id - The ID of the HIT in question.
+- worker_id - The ID of the worker who completed the HIT.
+- image_url - The URL for the image shown to the worker.
+- seen - Whether or not the worker has seen the character before.
+- prompt - The prompt for the verification test.
+- type_test - The worker's response to the verification test.
+- adjective0 through adjective9 - The worker's responses to the shown image.
+
+
+### Aggregation
+The aggregation module `ag.py` is in the `src/` directory. It collects the most popular responses for each image and returns a file with the top five responses for each given image.
+
+Input to the aggregation module is the output of the quality control module above.
+
+Output from the aggregation module is a CSV with the following fields:
+- image_url - The URL for the image shown to the worker.
+- adjective0 through adjective4 - The top 5 adjectives by response frequency in descending order.
