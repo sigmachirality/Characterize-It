@@ -4,7 +4,7 @@ Thank you for your interest in Characterize It! Here's what you should do:
 
 1) Watch this short video explaining our project and how to contribute: https://vimeo.com/331325026
 
-2) Navigate to our HIT on Mechanical Turk Worker Sandbox: (insert link)
+2) Navigate to our HIT on Mechanical Turk Worker Sandbox: https://workersandbox.mturk.com/projects/36TBNKR9195HAVZCYI1HY0GW5HODEY/tasks?ref=w_pl_prvw
 
 3) Accept and complete as many tasks as you would like.
 
