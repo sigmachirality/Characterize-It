@@ -19,6 +19,11 @@ dc_data = d_data['imgurl'].dropna().reset_index(drop=True)
 data_series = pd.concat([marvel_data.head(num_rows // 2), dc_data.head(num_rows // 2)])
 data = data_series.to_frame().reset_index(drop=True)
 
+# below is used to get a csv of hero names
+# marvel_name_data = m_data[m_data['imgurl'].isin(data_series)]['name']
+# dc_name_data = d_data[d_data['imgurl'].isin(data_series)]['name']
+# (pd.concat([marvel_name_data, dc_name_data])).to_csv('heroes.csv', index=False)
+
 # read prompt word csv
 words = pd.read_csv('../data/promptwords.csv', names=['prompt'])
 
