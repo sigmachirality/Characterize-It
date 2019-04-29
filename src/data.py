@@ -15,8 +15,13 @@ marvel_data = m_data['imgurl'].dropna().reset_index(drop=True)
 d_data = pd.read_csv('../data/dc-wikia-data-images.csv', delimiter=',')
 dc_data = d_data['imgurl'].dropna().reset_index(drop=True)
 
-# merge the data
-data_series = pd.concat([marvel_data.head(num_rows // 2), dc_data.head(num_rows // 2)])
+# read in images that have already been used
+p_data = pd.read_csv('../data/submitted/mturk_input_200.csv', delimiter=',')
+past_data = p_data['image_url'].dropna().reset_index(drop=True)
+
+# merge the data, filter the data, convert to dataframe
+data_series = pd.concat([marvel_data, dc_data])
+data_series = data_series[~data_series.isin(past_data)].head(num_rows)
 data = data_series.to_frame().reset_index(drop=True)
 
 # below is used to get a csv of hero names
