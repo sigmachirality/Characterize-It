@@ -13,6 +13,9 @@ def quality_control (infile, outfile="out.csv"):
     writer = csv.writer(out)
     writer.writerow(["hit_id", "worker_id", "image_url", "seen", "prompt", "type_test", "adjective0", "adjective1", "adjective2", "adjective3", "adjective4", "adjective5", "adjective6", "adjective7", "adjective8", "adjective9"])
 
+    # TODO: read in adjective dictionary
+
+
     # iterate over input rows
     for _, row in inp.iterrows():
 
