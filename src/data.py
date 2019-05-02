@@ -8,11 +8,11 @@ else:
     num_rows = 200
 
 # read in marvel images
-m_data = pd.read_csv('../data/marvel-wikia-data-images.csv', delimiter=',')
+m_data = pd.read_csv('../data/scraped/marvel-wikia-data-images.csv', delimiter=',')
 marvel_data = m_data['imgurl'].dropna().reset_index(drop=True)
 
 # read in dc images
-d_data = pd.read_csv('../data/dc-wikia-data-images.csv', delimiter=',')
+d_data = pd.read_csv('../data/scraped/dc-wikia-data-images.csv', delimiter=',')
 dc_data = d_data['imgurl'].dropna().reset_index(drop=True)
 
 # read in images that have already been used
