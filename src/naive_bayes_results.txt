@@ -1,0 +1,50 @@
+Analysis
+
+
+Sandbox Predicting Alignment:
+nan
+[(2, u'angry'), (2, u'determined'), (2, u'scared'), (1, u'annoying'), (1, u'blond'), (1, u'blonde'), (1, u'canyon'), (1, u'chill'), (1, u'cool'), (1, u'fear')]
+Neutral Characters
+[(14, u'strong'), (13, u'fear'), (12, u'angry'), (8, u'evil'), (7, u'mean'), (7, u'powerful'), (7, u'scary'), (6, u'anger'), (6, u'determined'), (5, u'dark')]
+Good Characters
+[(59, u'strong'), (44, u'angry'), (33, u'powerful'), (32, u'fear'), (28, u'excitement'), (22, u'evil'), (21, u'awe'), (18, u'muscular'), (16, u'cool'), (16, u'determined')]
+Bad Characters
+[(9, u'mean'), (6, u'evil'), (5, u'angry'), (5, u'green'), (4, u'fear'), (3, u'bald'), (3, u'big'), (3, u'intense'), (3, u'scary'), (2, u'determined')]
+Cross Validation CV: Accuracy: 0.65 (+/- 0.02)
+Train Accuracy: 0.926829268292683
+
+Mturk Predicting Alignment:
+nan
+[(6, u'happy'), (5, u'sexy'), (4, u'sassy'), (3, u'attractive'), (3, u'fit'), (3, u'witty'), (2, u'aggressive'), (2, u'athletic'), (2, u'bold'), (2, u'capable')]
+Bad Characters
+[(38, u'strong'), (33, u'fear'), (27, u'angry'), (25, u'evil'), (20, u'muscular'), (19, u'brave'), (17, u'powerful'), (15, u'mean'), (14, u'aggressive'), (14, u'bold')]
+Good Characters
+[(96, u'strong'), (59, u'fit'), (53, u'angry'), (53, u'tall'), (51, u'muscular'), (43, u'brave'), (43, u'fear'), (39, u'confident'), (38, u'determined'), (35, u'diplomatic')]
+Neutral Characters
+[(28, u'strong'), (19, u'angry'), (14, u'brave'), (13, u'evil'), (11, u'fit'), (10, u'bold'), (10, u'muscular'), (9, u'fear'), (8, u'determined'), (8, u'diplomatic')]
+Cross Validation CV: Accuracy: 0.53 (+/- 0.03)
+Train Accuracy: 0.8357487922705314
+
+
+Mturk Predicting Gender:
+nan
+[(2, u'angry'), (2, u'fearful'), (1, u'agressive'), (1, u'annoyed'), (1, u'avian'), (1, u'awe'), (1, u'awestruck'), (1, u'clawed'), (1, u'considerate'), (1, u'diplomatic')]
+Agender Characters
+[(4, u'looking'), (4, u'to'), (3, u'for'), (2, u'adventure'), (2, u'kill'), (2, u'of'), (2, u'ready'), (1, u'achieving'), (1, u'angry'), (1, u'anxiety')]
+Male Characters
+[(122, u'strong'), (77, u'angry'), (73, u'muscular'), (68, u'fear'), (56, u'brave'), (49, u'evil'), (48, u'tall'), (47, u'fit'), (42, u'diplomatic'), (39, u'bold')]
+Female Characters
+[(40, u'strong'), (39, u'fit'), (29, u'confident'), (28, u'sexy'), (24, u'beautiful'), (24, u'tall'), (23, u'attractive'), (23, u'determined'), (21, u'brave'), (21, u'happy')]
+Cross Validation Accuracy: 0.73 (+/- 0.05)
+Train Accuracy: 0.927536231884058
+
+
+Sandbox Predicting Gender:
+Genderfluid Characters
+[(1, u'brave'), (1, u'green'), (1, u'inspired'), (1, u'manly'), (1, u'powerful'), (1, u'scared'), (1, u'tough'), (1, u'viking'), (1, u'worried'), (0, u'abrasive')]
+Male Characters
+[(55, u'strong'), (50, u'angry'), (38, u'fear'), (30, u'powerful'), (28, u'evil'), (27, u'mean'), (22, u'determined'), (21, u'excitement'), (21, u'muscular'), (16, u'awe')]
+Female Characters
+[(19, u'strong'), (13, u'angry'), (12, u'fear'), (11, u'happy'), (10, u'powerful'), (10, u'pretty'), (8, u'cool'), (8, u'evil'), (8, u'red'), (7, u'awe')]
+Cross Validation Accuracy: 0.69 (+/- 0.05)
+Train Accuracy: 0.9609756097560975
