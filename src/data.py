@@ -8,7 +8,8 @@ else:
     num_rows = 200
 
 # read in marvel images
-m_data = pd.read_csv('../data/scraped/marvel-wikia-data-images.csv', delimiter=',')
+m_data = pd.read_csv(
+    '../data/scraped/marvel-wikia-data-images.csv', delimiter=',')
 marvel_data = m_data['imgurl'].dropna().reset_index(drop=True)
 
 # read in dc images
@@ -16,8 +17,11 @@ d_data = pd.read_csv('../data/scraped/dc-wikia-data-images.csv', delimiter=',')
 dc_data = d_data['imgurl'].dropna().reset_index(drop=True)
 
 # read in images that have already been used
-p_data = pd.read_csv('../data/submitted/mturk_input_200.csv', delimiter=',')
-past_data = p_data['image_url'].dropna().reset_index(drop=True)
+p1_data = pd.read_csv('../data/submitted/mturk_input_200.csv', delimiter=',')
+past_data1 = p1_data['image_url'].dropna().reset_index(drop=True)
+p2_data = pd.read_csv('../data/submitted/mturk_input_300.csv', delimiter=',')
+past_data2 = p2_data['image_url'].dropna().reset_index(drop=True)
+past_data = past_data1.append(past_data2)
 
 # merge the data, filter the data, convert to dataframe
 data_series = pd.concat([marvel_data, dc_data])
@@ -41,7 +45,8 @@ prompt_words = p_words.dropna().reset_index(drop=True)
 
 # join and write
 joined = data.join(prompt_words.head(num_rows))
-final = joined.rename(index=str, columns={'imgurl':'image_url', 'prompt':'prompt'})
+final = joined.rename(index=str, columns={
+                      'imgurl': 'image_url', 'prompt': 'prompt'})
 
 # write to csv
 final.to_csv('../data/mturk_input_{}.csv'.format(num_rows), index=False)
