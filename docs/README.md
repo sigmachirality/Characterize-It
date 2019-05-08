@@ -1,5 +1,5 @@
 # Characterize-It
-![](/superhero.png)
+![](/characterizeitlogo.png)
 
 #
 
